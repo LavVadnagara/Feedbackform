@@ -1,0 +1,155 @@
+body {
+    width: 98vw;
+    height: 35.35rem;
+    background-color: #fefefe;
+    background-image: repeating-radial-gradient(
+      circle at 0rem 0px,
+      transparent 0,
+      #fefefe 50px
+    ), repeating-linear-gradient(#5394fd55, #5394fd);
+}
+
+.container {
+    max-width: 600px;
+    max-height: 600px;
+    padding: 20px;
+    margin: 0px auto;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    box-shadow: 0px 0px 20px 1px black;
+}
+
+:root {
+    --BodyFont: "Josefin Sans", sans-serif;
+    --ColorStyle: #5394fd;
+    --FontSize: 14px;
+}
+
+.subtitle {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: var(--BodyFont);
+}
+
+.description {
+    font-size: var(--FontSize);
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: var(--BodyFont);
+    line-height: 16px;
+    padding-top: -50px;
+}
+
+::placeholder {
+    opacity: 30%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Lname {
+    margin-bottom: -10px;
+    margin-left: 20px;
+    font-size: var(--FontSize);
+    font-family: var(--BodyFont);
+}
+
+.field {
+    width: 95%;
+    height: 25px;
+    text-align: left;
+    margin: 0.625rem;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 1.5px solid black;
+    outline: none;
+    font-size: var(--FontSize);
+}
+
+textarea {
+    width: 93%;
+    padding: 5px;
+    font-family: Arial;
+    font-size: var(--FontSize);
+}
+
+textarea::placeholder{
+    margin-left: 50px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 95%;
+    padding: 5px;
+    /* margin-bottom: 10px; */
+    font-family: Arial;
+    font-size: var(--FontSize);
+    background-color: transparent;
+}
+
+input[type="submit"] {
+    margin-top: 30px;
+    background-color: var(--ColorStyle);
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: var(--BodyFont);
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(84, 83, 82);
+}
+
+input[type="submit"]:focus {
+    outline: none;
+}
+
+.rate-box {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 43%;
+    padding: 5px 10px;
+    align-items: center;
+    gap: 0.3rem;
+    border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+
+.rate-box input {
+    display: none;
+}
+
+.rate-box input:hover~.star:before {
+    color: rgba(255, 204, 51, 0.5);
+}
+
+.rate-box input:active+.star:before {
+    transform: scale(0.9);
+}
+
+.rate-box input:checked~.star:before {
+    color: #ffcc33;
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3), -3px -3px 8px rgba(255, 255, 255, 0.8);
+}
+
+.rate-box .star:before {
+    content: "★";
+    font-family: "Potta One", cursive;
+    display: inline-block;
+    font-size: 3rem;
+    cursor: pointer;
+    color: #0000;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+    background-color: #aaa;
+    background-clip: text;
+    transition: all 0.3s;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Feedback Page</title>
+
+    <link rel="stylesheet" href="Feedback.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Potta+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
+        <h2 class="subtitle">Feedback Form</h2>
+        <p class="description">Your feedback is important to us. <br>Please take a moment to
+            provide your feedback below.</p>
+
+        <form class="FormAttributes" id="feedback-form">
+            <div class="FBForm">
+                <label for="Uname" class="Lname">Name:</label>
+                <input type="text" class="field" placeholder="Please tell us your name" id="Uname" name="Uname"
+                    required>
+            </div>
+
+            <div class="FBForm">
+                <label for="Uemail" class="Lname">Email:</label>
+                <input type="email" class="field" placeholder="Share your Email with us" id="Uemail" name="Uemail"
+                    required>
+            </div>
+
+            <div class="FBForm">
+                <label for="Umessage" class="Lname">Message:</label>
+                <textarea class="field" placeholder="We'd love to hear your thoughts and suggestions" id="Umessage"
+                    name="Umessage" required></textarea>
+            </div>
+
+            <label for="star" class="Lname">Rating:</label>
+            <div class="rate-box">
+                <input type="radio" name="star" id="star0">
+                <label class="star" for="star0"></label>
+                <input type="radio" name="star" id="star1">
+                <label class="star" for="star1"></label>
+                <input type="radio" name="star" id="star2">
+                <label class="star" for="star2"></label>
+                <input type="radio" name="star" id="star3">
+                <label class="star" for="star3"></label>
+                <input type="radio" name="star" id="star4">
+                <label class="star" for="star4"></label>
+            </div>
+
+            <input class="Submitbtn" type="submit" value="Submit">
+        </form>
+    </div>
+    <script src="feedback.js"></script>
+</body>
+
+</html>
